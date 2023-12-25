@@ -1,0 +1,35 @@
+header{
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #655CFE;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cart{
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.cartIcon{
+    position: relative;;
+}
+
+.cartIcon span{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0.5rem; */
+    font-size: 0.9rem;
+    border-radius: 50%;
+    background-color: #A29CFE;
+    right: -1rem;
+    top: -0.6rem;
+}
