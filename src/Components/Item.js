@@ -23,6 +23,7 @@ export default function Item(props) {
           props.onRemove(props.title, 1);
         } else {
           setCount(newCount);
+          props.onUpdateTotal(props.title, newCount);
         }
       }
   }

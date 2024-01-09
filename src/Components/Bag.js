@@ -7,6 +7,7 @@ export default function Bag() {
   const [totalPrice, setTotalPrice] = useState(2199.96);
   const [cartItems, setCartItems] = useState(data);
   const [isCartEmpty, setIsCartEmpty] = useState(cartItems.length === 0);
+  // let [totalCount, setTotalCount] = useState(4);
 
   function handleUpdateTotal(title, newCount) {
     // Update the count for the specific item
@@ -50,6 +51,13 @@ export default function Bag() {
     setIsCartEmpty(true);
   }
 
+  let final = cartItems.reduce((curr, acc)=>{
+    return curr.count + acc;
+  }, 0);
+
+  // setTotalCount(final);
+  // console.log(final);
+
   return (
     <div className="container">
       <h1>YOUR BAG</h1>
@@ -73,11 +81,13 @@ export default function Bag() {
         <div className="total">
           <p className="totalText">Total</p>
           <p className="totalPrice">
-            ${" "}
+            $
             {("" + totalPrice).substring(0, ("" + totalPrice).indexOf(".") + 3)}
           </p>
         </div>
-        <button className="clearCart" onClick={clearCart}>Clear Cart</button>
+        <button className="clearCart" onClick={clearCart}>
+          Clear Cart
+        </button>
       </div>
     </div>
   );
